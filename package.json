@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "ts-node": "^10.9.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.40.0",
+    "@types/node": "^20.9.0",
+    "@typescript-eslint/eslint-plugin": "^6.11.0",
+    "@typescript-eslint/parser": "^6.11.0",
+    "allure-commandline": "^2.24.1",
+    "allure-playwright": "^2.9.2",
+    "eslint": "^8.53.0",
+    "typescript": "^5.2.2"
+  },
+  "scripts": {
+    "allure:results": "playwright test --reporter=line,allure-playwright",
+    "allure:open": "allure generate ./allure-results --clean && allure open ./allure-report"
+  }
+}
